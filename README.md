@@ -1,5 +1,4 @@
 # Sentiment-Analysis-of-Product-Reviews-Using-TF-IDF-and-ML-Classifiers
-# Student Details
 
 | Name       | Roll No | Course |
 |------------|----------|--------|

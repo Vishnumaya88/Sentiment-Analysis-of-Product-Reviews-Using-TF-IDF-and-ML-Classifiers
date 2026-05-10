@@ -3,5 +3,5 @@
 | Name       | Roll No | Course |
 |------------|----------|--------|
 | Adithya    | 253314   | GIS    |
-| Gayathri   |          | CSDA   |
+| Gayathri   | 253019    | CSDA   |
 | Vishnumaya | 253013   | CSDA   |

@@ -18,3 +18,24 @@ The goal of this project is to classify customer reviews into Positive, Neutral,
     - **Negative (Ratings 1-2):** 14,350
     - **Positive (Ratings 4-5):** 5,820
     - **Neutral (Rating 3):** 885
+## 3. Methodology Overview
+1. **Data Cleaning:** Handled `latin1` encoding, removed HTML tags, URLs, and special characters using Regex.
+2. **Feature Extraction:**
+   - **TF-IDF:** Extracted top 5,000 unigrams and bigrams.
+   - **Linguistic Metadata:** Engineered custom features like "Negation Presence" and "Punctuation Density."
+3. **Feature Selection:** Applied **Chi-Square ($\chi^2$)** to reduce the feature space to the top 3,000 most significant predictors.
+4. **Model Training:** Compared four algorithms: Logistic Regression, Multinomial Naive Bayes, Linear SVM, and Gradient Boosting.
+5. **Evaluation:** Prioritized **Macro F1-Score** due to significant class imbalance.
+6. ## 4. Results & Evaluation
+7. The **Linear SVM** model provided the best balance across all sentiment classes.
+
+| Model | Macro F1-Score | Global Accuracy |
+| :--- | :--- | :--- |
+| **Linear SVM** | **0.6235** | **90%** |
+| **Logistic Regression** | 0.6065 | 90% |
+| **Gradient Boosting** | 0.5886 | 86% |
+| **Multinomial NB** | 0.5235 | 79% |
+
+**Top Discriminating Features:**
+- **Positive:** *perfect, amazing, excellent, great, love.*
+- **Negative:** *useless, terrible, horrible, worst, not.*
